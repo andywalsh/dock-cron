@@ -2,10 +2,10 @@
 
 VERSION=0.9.39
 
-docker build --pull -t bluet/cronicle-docker .
-docker scan bluet/cronicle-docker:latest
+docker build --pull -t andywalsh/cron-dock .
+docker scan andywalsh/cron-dock:latest
 
-docker tag bluet/cronicle-docker:latest bluet/cronicle-docker:${VERSION}
+docker tag andywalsh/crondock:latest andywalsh/cron-dock:${VERSION}
 
 # move git tag to last step
 #git tag "${VERSION}" -a -m "cronicle ${VERSION}"
@@ -20,7 +20,7 @@ docker buildx create --use
 while true; do
         read -p "Is VERSION=${VERSION} the current latest version? (We're going to build multi-platform images and push) [y/N]" yn
         case $yn in
-                [Yy]* ) docker buildx build -t bluet/cronicle-docker:latest -t bluet/cronicle-docker:${VERSION} --platform linux/amd64,linux/arm64/v8 --pull --push .; break;;
+                [Yy]* ) docker buildx build -t bluet/cron-dock:latest -t bluet/cron-dock:${VERSION} --platform linux/amd64,linux/arm64/v8 --pull --push .; break;;
                 [Nn]* ) break;;
                 * ) echo "";;
         esac
