@@ -24,7 +24,7 @@ docker run \
         bluet/cronicle-docker:latest
 ```
 
-The web UI will be available at: http://localhost:3012
+The web UI will be available at: http://localhost:3167
 
 > NOTE: please replace the hostname `localhost`, this is only for testing
 > purposes! If you rename the hostname also consider setting the environmental
