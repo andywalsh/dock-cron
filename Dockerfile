@@ -1,10 +1,10 @@
 FROM       docker:24.0
-LABEL      maintainer="BlueT - Matthew Lien - 練喆明 <bluet@bluet.org>"
+LABEL      maintainer="Andy"
 
 # Docker defaults
 ENV        CRONICLE_VERSION 0.9.39
-ENV        CRONICLE_base_app_url 'http://localhost:3012'
-ENV        CRONICLE_WebServer__http_port 3012
+ENV        CRONICLE_base_app_url 'http://localhost:3167'
+ENV        CRONICLE_WebServer__http_port 3167
 ENV        CRONICLE_WebServer__https_port 443
 ENV        EDITOR=nano
 
@@ -22,7 +22,7 @@ RUN        mkdir -p /opt/cronicle \
 WORKDIR    /opt/cronicle/
 ADD        docker/entrypoint.sh /entrypoint.sh
 
-EXPOSE     3012
+EXPOSE     3167
 
 # data volume is also configured in entrypoint.sh
 VOLUME     ["/opt/cronicle/data", "/opt/cronicle/logs", "/opt/cronicle/plugins"]
