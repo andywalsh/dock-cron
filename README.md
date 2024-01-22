@@ -2,7 +2,7 @@
 # Usage
 ## Install
 ```sh
-docker pull andywalsh/dock-cron:latest
+docker pull walshav/dock-cron
 ```
 
 ## Running
