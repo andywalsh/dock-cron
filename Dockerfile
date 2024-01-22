@@ -2,7 +2,7 @@ FROM       docker:24.0
 LABEL      maintainer="Andy"
 
 # Docker defaults
-ENV        CRONICLE_VERSION 0.9.39
+ENV        CRONICLE_VERSION 0.9.40
 ENV        CRONICLE_base_app_url 'http://localhost:3167'
 ENV        CRONICLE_WebServer__http_port 3167
 ENV        CRONICLE_WebServer__https_port 443
